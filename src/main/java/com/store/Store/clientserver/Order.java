@@ -32,14 +32,14 @@ public class Order implements ClientOrder{
         }
     }
 
-    public void setPaymentStrategy(PaymentStrategy strategy){
+    public void setPayment(PaymentStrategy strategy){
         payment = new Payment(strategy);
         if (payment.isPaymentStatus()){
             delivery.setDeliveryStatus(true);
         }
     }
 
-    public void setDeliveryStrategy(DeliveryStrategy strategy){
+    public void setDelivery(DeliveryStrategy strategy){
         this.delivery = new Delivery(strategy);
         if (payment.isPaymentStatus()){
             delivery.setDeliveryStatus(true);
