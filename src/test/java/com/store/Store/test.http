@@ -1,0 +1,24 @@
+GET http://localhost:8080/api/v1/flower
+
+###
+PUT http://localhost:8080/api/v1/flower
+Content-Type: application/json
+
+{
+  "sepalLength": 100,
+  "color": "blue",
+  "price": 100
+}
+
+###
+POST http://localhost:8080/api/v1/flower
+Content-Type: application/json
+
+{
+  "sepalLength": 100,
+  "color": "2blue2",
+  "price": 100
+}
+
+###
+DELETE http://localhost:8080/api/v1/flower/1
