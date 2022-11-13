@@ -2,6 +2,9 @@ package com.store.Store.flower;
 
 import com.store.Store.flower.properties.FlowerColor;
 import com.store.Store.flower.properties.FlowerType;
+import com.store.Store.flower.properties.types.Chamomile;
+import com.store.Store.flower.properties.types.Rose;
+import com.store.Store.flower.properties.types.Tulip;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +13,6 @@ import java.util.List;
 
 @Configuration
 public class FlowerConfig {
-
     @Bean
     CommandLineRunner commandLineRunner(FlowerRepository repository){
         return args -> {
@@ -28,9 +30,12 @@ public class FlowerConfig {
                     8
 
             );
+            Chamomile chamomile = new Chamomile();
+            Rose rose = new Rose();
+            Tulip tulip = new Tulip();
 
             repository.saveAll(
-                    List.of(flower1, flower2)
+                    List.of(flower1, flower2, chamomile, rose, tulip)
             );
         };
     }

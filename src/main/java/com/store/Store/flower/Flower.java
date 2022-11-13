@@ -22,14 +22,14 @@ public class Flower {
     @Enumerated(EnumType.STRING)
     private FlowerType flowerType;
 
+    public Flower(){
+    }
+
     public Flower(FlowerType type, FlowerColor color, double sepalLength, double price) {
         this.flowerType = type;
         this.color = color;
         this.sepalLength = sepalLength;
         this.price = price;
-    }
-
-    public Flower(){
     }
 
     public Flower(int id, FlowerType type, FlowerColor color, double sepalLength, double price) {
