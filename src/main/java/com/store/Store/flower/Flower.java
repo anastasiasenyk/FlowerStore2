@@ -1,5 +1,7 @@
 package com.store.Store.flower;
 
+import com.store.Store.flower.properties.FlowerColor;
+import com.store.Store.flower.properties.FlowerType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,9 +17,13 @@ public class Flower {
 //    @Transient
     private double price;
     public static final int COEFF = 5;
-    private String color;
+    @Enumerated(EnumType.STRING)
+    private FlowerColor color;
+    @Enumerated(EnumType.STRING)
+    private FlowerType flowerType;
 
-    public Flower(String color, double sepalLength, double price) {
+    public Flower(FlowerType type, FlowerColor color, double sepalLength, double price) {
+        this.flowerType = type;
         this.color = color;
         this.sepalLength = sepalLength;
         this.price = price;
@@ -26,28 +32,12 @@ public class Flower {
     public Flower(){
     }
 
-    public Flower(int id, String color, double sepalLength, double price) {
+    public Flower(int id, FlowerType type, FlowerColor color, double sepalLength, double price) {
         this.id = id;
+        this.flowerType = type;
+        this.color = color;
         this.sepalLength = sepalLength;
         this.price = price;
-        this.color = color;
-    }
 
-//    public Flower(String color,
-//                  double sepalLength) {
-//        this.sepalLength = sepalLength;
-//        this.color = color;
-//    }
-
-//    public Flower(int id,
-//                  String color,
-//                  double sepalLength) {
-//        this.id = id;
-//        this.sepalLength = sepalLength;
-//        this.color = color;
-//    }
-
-    public void getPrice() {
-        this.price = COEFF*this.sepalLength;
     }
 }
