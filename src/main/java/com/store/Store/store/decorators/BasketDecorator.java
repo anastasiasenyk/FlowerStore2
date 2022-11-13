@@ -10,7 +10,7 @@ public class BasketDecorator extends ItemDecorator{
 
     public BasketDecorator(Item item){
         setItem(item);
-        setDescription("with bascet!");
+        setDescription("with basket!");
     }
 
     public double getPrice(){
