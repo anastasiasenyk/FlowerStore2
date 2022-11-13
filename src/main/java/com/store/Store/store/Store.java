@@ -14,7 +14,6 @@ public class Store {
     public void addBucket(final FlowerBucket bucket) {
         store.add(bucket);
     }
-
     public boolean searchFlowers(final Flower flower, final int amount) {
         int counter = 0;
         for (FlowerBucket bucket: store) {

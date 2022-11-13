@@ -28,10 +28,10 @@ public class FlowerService {
         flowerRepository.save(flower);
     }
 
-    public void deleteFlower(Integer flowerid) {
-        if (!flowerRepository.existsById(flowerid)){
-            throw new IllegalStateException("flower with this" + flowerid + " does not exists");
+    public void deleteFlower(Integer flowerId) {
+        if (!flowerRepository.existsById(flowerId)){
+            throw new IllegalStateException("flower with this" + flowerId + " does not exists");
         }
-        flowerRepository.deleteById(flowerid);
+        flowerRepository.deleteById(flowerId);
     }
 }

@@ -1,8 +1,6 @@
 package com.store.Store.clientserver;
 
-import com.store.Store.clientserver.delivery.Delivery;
 import com.store.Store.clientserver.delivery.DeliveryStrategy;
-import com.store.Store.clientserver.payment.Payment;
 import com.store.Store.clientserver.payment.PaymentStrategy;
 import com.store.Store.store.Item;
 
